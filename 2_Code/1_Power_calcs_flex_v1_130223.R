@@ -60,6 +60,10 @@ data <- data |>
     TRUE ~ 99
   ))
 
+# Transforming to half-hour
+data <- data |>
+  mutate(usage = usage / 2)
+
 ## Note, opting in to an event is our secondary outcome measure. We don't use
 ## this variable for the power calculations, but it is helpful to see.
 
@@ -118,8 +122,10 @@ for (i in 1:sims) {
   # Creating random number and ordering
   data_to_use <- data |>
     filter(!duplicated(id)) |> ## Removing duplicates (there aren't any fortunately)
-    mutate(rand = runif(1)) |> ## Generating random number
-    arrange(rand) ## Sorting by random number
+      group_by(id) |>
+        mutate(rand = runif(1)) |> ## Generating random number
+          ungroup() |>  
+            arrange(rand) ## Sorting by random number
   
   # Selecting sample for this simulation
   sample <- sample_seq[(sim %% (length(sample_seq)) +1)] ## This is a way to subsequently sample from sample_seq
