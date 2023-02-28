@@ -4,16 +4,16 @@ Dependent Variable: usage
 Type: OLS linear regression 
 
 MODEL FIT:
-F(1,1498) = 0.02, p = 0.90
+F(1,1498) = 1.58, p = 0.21
 R² = 0.00
-Adj. R² = -0.00 
+Adj. R² = 0.00 
 
 Standard errors: OLS
 ---------------------------------------------------------
                              Est.    S.E.   t val.      p
 ------------------------ -------- ------- -------- ------
-(Intercept)                185.33    9.67    19.17   0.00
-treatmentTreatment          -1.75   13.48    -0.13   0.90
+(Intercept)                190.70    8.82    21.63   0.00
+treatmentTreatment         -15.92   12.68    -1.26   0.21
 ---------------------------------------------------------
 MODEL INFO:
 Observations: 1500
@@ -21,14 +21,14 @@ Dependent Variable: usage
 Type: OLS linear regression 
 
 MODEL FIT:
-F(1,1498) = 0.02, p = 0.90
+F(1,1498) = 1.58, p = 0.21
 R² = 0.00
-Adj. R² = -0.00 
+Adj. R² = 0.00 
 
 Standard errors: Robust, type = HC3
 ---------------------------------------------------------
                              Est.    S.E.   t val.      p
 ------------------------ -------- ------- -------- ------
-(Intercept)                185.33    9.40    19.71   0.00
-treatmentTreatment          -1.75   13.46    -0.13   0.90
+(Intercept)                190.70    8.23    23.18   0.00
+treatmentTreatment         -15.92   12.74    -1.25   0.21
 ---------------------------------------------------------

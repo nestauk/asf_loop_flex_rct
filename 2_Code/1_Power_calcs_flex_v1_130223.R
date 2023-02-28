@@ -60,7 +60,7 @@ data <- data |>
     TRUE ~ 99
   ))
 
-# Transforming to half-hour
+# Transforming to half-hour (current data is for full hour)
 data <- data |>
   mutate(usage = usage / 2)
 
@@ -249,7 +249,7 @@ output_table <- output_data |>
   group_by(type, sample) |>
   summarise(
     control_mean = mean(control_mean, na.rm = TRUE),
-    control_sd = mean(control_mean, na.rm = TRUE),
+    control_sd = mean(control_sd, na.rm = TRUE),
     beta = mean(beta, na.rm = TRUE),
     se = mean(se, na.rm = TRUE),
     arms = mean(arms, na.rm = TRUE)
